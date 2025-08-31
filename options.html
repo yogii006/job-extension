@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Job Mail Generator - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="options-container">
+<h2>Profile & API Settings</h2>
+        
+        <div class="profile-section">
+            <h3>Personal Information</h3>
+            <div class="profile-fields">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Your full name" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="your.email@example.com" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+1 (555) 123-4567" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="github">GitHub Profile</label>
+                    <input type="url" id="github" placeholder="https://github.com/yourusername" />
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="portfolio">Portfolio/Website</label>
+                    <input type="url" id="portfolio" placeholder="https://yourportfolio.com" />
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="resumeDriveLink">Resume Google Drive Link</label>
+                    <input type="url" id="resumeDriveLink" placeholder="https://drive.google.com/file/d/..." />
+                    <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                        Upload your resume to Google Drive, make it public, and paste the sharing link here. 
+                        <a href="https://support.google.com/drive/answer/2494822?hl=en" target="_blank">How to get sharing link?</a>
+                    </small>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="education">Education</label>
+                    <textarea id="education" placeholder="e.g., Bachelor's in Computer Science, University of XYZ, 2020" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="experience">Work Experience</label>
+                    <textarea id="experience" placeholder="e.g., 3 years of experience in software development, specializing in web technologies..." rows="3"></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="skills">Skills & Technologies</label>
+                    <textarea id="skills" placeholder="e.g., JavaScript, React, Node.js, Python, AWS, Docker, Git..." rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="resume-section">
+            <h3>Resume Upload (Alternative)</h3>
+            <div class="form-group">
+                <label for="resumeFile">Upload Resume (PDF) - Optional</label>
+                <input type="file" id="resumeFile" accept=".pdf" />
+                <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                    Alternative: Upload your resume in PDF format for local storage. The AI will use this to generate more accurate emails.
+                </small>
+                <div id="resumeStatus" class="resume-status"></div>
+                <div id="resumeActions" class="resume-actions" style="display: none;">
+                    <button id="downloadResumeBtn" class="btn-secondary" style="margin-top: 10px;">
+                        📥 Download Resume
+                    </button>
+                    <button id="removeResumeBtn" class="btn-secondary" style="margin-top: 10px; margin-left: 10px; background: #dc3545;">
+                        🗑️ Remove Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="api-section">
+            <h3>OpenAI API Configuration</h3>
+            <div class="form-group">
+                <label for="apiKey">OpenAI API Key *</label>
+                <input type="password" id="apiKey" placeholder="sk-..." required />
+                <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                    Get your API key from <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a>
+                </small>
+            </div>
+        </div>
+        
+        <div class="save-section">
+            <button id="saveBtn" class="save-btn">Save Settings</button>
+            <div id="saveStatus" class="status" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+    
+<script src="options.js"></script>
+</body>
+</html>

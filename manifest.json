@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Job Mail Generator",
+  "version": "1.0",
+  "description": "Generate and send professional job application emails using AI. Save your profile details and resume, then let AI create personalized emails for recruiters.",
+  "author": "Yogesh Yadav",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "Job Mail Generator"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

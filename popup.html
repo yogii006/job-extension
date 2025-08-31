@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Job Mail Generator</h2>
+        
+        <div class="form-group">
+            <label for="recruiterEmail">Recruiter Email (Optional)</label>
+            <input type="email" id="recruiterEmail" placeholder="recruiter@company.com or leave empty to extract from job description">
+            <small class="form-hint">Leave empty to automatically extract email from job description</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="jobDesc">Job Description:</label>
+            <textarea id="jobDesc" placeholder="Paste the job description here..." rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="jobTitle">Job Title (Optional):</label>
+            <input type="text" id="jobTitle" placeholder="e.g., Software Engineer" />
+        </div>
+        
+        <div class="button-group">
+            <button id="generateBtn" class="btn btn-primary">Generate Email</button>
+            <button id="settingsBtn" class="btn btn-secondary">Settings</button>
+            <button id="clearFormBtn" class="btn btn-outline">Clear Form</button>
+        </div>
+        
+        <div id="status" class="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
